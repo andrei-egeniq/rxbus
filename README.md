@@ -32,3 +32,6 @@ relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
+**`Setup instructions`**
+
+https://jitpack.io/#andrei-egeniq/rxbus/
