@@ -41,12 +41,12 @@ Download
 
 Add jitpack repository in your root `build.gradle`:
 ```groovy
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+  allprojects {
+    repositories {
+      ...
+      maven { url 'https://jitpack.io' }
+    }
+  }
 ```
 
 Add the `rxbus` dependency:
