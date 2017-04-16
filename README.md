@@ -23,7 +23,8 @@ relay.accept("three");
 BusRelay<Object> relay = new BusRelay<>()
 relay.accept("zero");
 relay.accept("one");
-relay.subscribe(observer);
+relay.subscribe(observer1);
+relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
