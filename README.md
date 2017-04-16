@@ -36,9 +36,24 @@ If the event is kept, as `BehaviorRelay` does, there is a temptation to store th
 
 `BusRelay` was written to replicate the https://github.com/greenrobot/EventBus sticky event functionality, in a more strict way to prevent bad patterns. 
 
-**`Setup instructions`**
+Download
+--------
 
-https://jitpack.io/#andrei-egeniq/rxbus/
+Add jitpack repository in your root `build.gradle`:
+```groovy
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Add the `rxbus` dependency:
+
+```groovy
+compile 'com.github.andrei-egeniq:rxbus:v1.2'
+```
 
 No proguard rules are needed for the libray.
 
