@@ -45,8 +45,7 @@ No proguard rules are needed for the libray.
 License
 -------
 
-    Copyright 2014 Netflix, Inc.
-    Copyright 2015 Jake Wharton
+    Copyright 2017 Egeniq BV
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
