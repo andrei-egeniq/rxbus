@@ -11,7 +11,7 @@ What does `BusRelay` do that is special?
 
 ```java
 // observer will receive all events.
-BusRelay<Object> relay = BusRelay.create();
+BusRelay<String> relay = BusRelay.create();
 relay.subscribe(observer);
 relay.accept("one");
 relay.accept("two");
@@ -20,7 +20,7 @@ relay.accept("three");
 ```java
 // observer1 will receive the "one", "two" and "three" events, but not "zero"
 // observer2 will receive the "two" and "three" events, as "one" was emited to observer1
-BusRelay<Object> relay = new BusRelay.create();
+BusRelay<String> relay = new BusRelay.create();
 relay.accept("zero");
 relay.accept("one");
 relay.subscribe(observer1);
@@ -40,4 +40,4 @@ If the event is kept, as `BehaviorRelay` does, there is a temptation to store th
 
 https://jitpack.io/#andrei-egeniq/rxbus/
 
-No proguard rules are needed for the libray
+No proguard rules are needed for the libray.
