@@ -3,9 +3,9 @@ A RxJava (2) Android specific Event Bus
 
 Based on https://github.com/JakeWharton/RxRelay 
 
-What does BusRelay do that is special? 
+What does `BusRelay` do that is special? 
 
-BusRelay keeps the event until the Android framework can consume it. If an API call returns data right after the user rotates the device, the data is kept and delived next time `subscribe` is called.
+`BusRelay` keeps the event until the Android framework can consume it. If an API call returns data right after the user rotates the device, the data is kept and delived next time `subscribe` is called on the same `BusRelay` object.
 
 **`BusRelay`**
 
@@ -28,11 +28,11 @@ relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
-Why not just used BehaviorRelay?
+Why not just used `BehaviorRelay`?
 
-If the event is kept, as BehaviorRelay does, on rotation the event is handled again, with posible undesired side effects.
+If the event is kept, as `BehaviorRelay` does, on rotation the event is handled again, with posible undesired side effects.
 
-If the event is kept, as BehaviorRelay does, there is a temptation to store the data in memory or use BehaviorRelay as a way to pass data between Activities. 
+If the event is kept, as `BehaviorRelay` does, there is a temptation to store the data in memory or use `BehaviorRelay` as a way to pass data between Activities. 
 
 **`Setup instructions`**
 
