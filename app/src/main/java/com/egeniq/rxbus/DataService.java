@@ -23,7 +23,7 @@ public class DataService {
     private BusRelay<BusSignal<Integer>> mBusRelay;
 
     public DataService() {
-        mBusRelay = new BusRelay<>();
+        mBusRelay = BusRelay.create();
     }
 
     public BusRelay<BusSignal<Integer>> getBus() {

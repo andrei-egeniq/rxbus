@@ -20,13 +20,21 @@ import io.reactivex.Observer;
  */
 public class BusRelay<T> extends Relay<T> {
 
-    final AtomicReference<T> mValue;
-    final private PublishRelay<T> mRelay;
+    private AtomicReference<T> mValue;
+    private PublishRelay<T> mRelay;
 
-    private final Lock mReadLock;
-    private final Lock mWriteLock;
+    private Lock mReadLock;
+    private Lock mWriteLock;
 
-    public BusRelay() {
+    public static <T> BusRelay<T> create() {
+        return new BusRelay<T>();
+    }
+
+    public static <T> BusRelay<T> createDefault(T defaultValue) {
+        return new BusRelay<T>(defaultValue);
+    }
+
+    private BusRelay() {
         mRelay = PublishRelay.create();
         mValue = new AtomicReference<T>();
 
@@ -34,6 +42,11 @@ public class BusRelay<T> extends Relay<T> {
 
         mReadLock = lock.readLock();
         mWriteLock = lock.writeLock();
+    }
+
+    private BusRelay(T t) {
+        super();
+        setValue(t);
     }
 
     private T getValue() {
