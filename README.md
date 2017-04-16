@@ -6,6 +6,7 @@ Based on https://github.com/JakeWharton/RxRelay
 What does BusRelay do that is special? 
 
 It keeps the previous event until it can emit it. Once it has emitted the event, it resets state.
+If the event is kept, as BehaviorRelay does, on rotation an Activity will handle the event again.
 
 **`BusRelay`**
 
