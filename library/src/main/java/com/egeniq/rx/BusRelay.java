@@ -58,7 +58,7 @@ public class BusRelay<T> extends Relay<T> {
     }
 
     private BusRelay(T t) {
-        super();
+        this();
         setValue(t);
     }
 
