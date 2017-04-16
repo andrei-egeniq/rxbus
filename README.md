@@ -34,6 +34,8 @@ If the event is kept, as `BehaviorRelay` does, on rotation the event is handled 
 
 If the event is kept, as `BehaviorRelay` does, there is a temptation to store the data in memory or use `BehaviorRelay` as a way to pass data between Activities. 
 
+`BusRelay` was written to replicate the https://github.com/greenrobot/EventBus sticky event functionality, in a more strict way to prevent bad patterns. 
+
 **`Setup instructions`**
 
 https://jitpack.io/#andrei-egeniq/rxbus/
