@@ -7,10 +7,6 @@ What does BusRelay do that is special?
 
 BusRelay keeps the event until the Android framework can consume it. If an API call returns data right after the user rotates the device, the data is kept and delived next time `subscribe` is called.
 
-If the event is kept, as BehaviorRelay does, on rotation the event is handled again, with posible undesired side effects.
-
-If the event is kept, as BehaviorRelay does, there is a temptation to store the data in memory or use BehaviorRelay as a way to pass data between Activities. 
-
 **`BusRelay`**
 
 ```java
@@ -32,6 +28,12 @@ relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
+Why not just used BehaviorRelay?
+
+If the event is kept, as BehaviorRelay does, on rotation the event is handled again, with posible undesired side effects.
+
+If the event is kept, as BehaviorRelay does, there is a temptation to store the data in memory or use BehaviorRelay as a way to pass data between Activities. 
+
 **`Setup instructions`**
 
 https://jitpack.io/#andrei-egeniq/rxbus/
