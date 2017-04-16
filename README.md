@@ -5,8 +5,11 @@ Based on https://github.com/JakeWharton/RxRelay
 
 What does BusRelay do that is special? 
 
-It keeps the previous event until it can emit it. Once it has emitted the event, it resets state.
-If the event is kept, as BehaviorRelay does, on rotation an Activity will handle the event again.
+BusRelay keeps the event until the Android framework can consume it. If an API call returns data right after the user rotates the device, the object is kept and delived to the recreated Activity.
+
+If the event is kept, as BehaviorRelay does, on rotation the event is handled again, with posible undesired side effects.
+
+If the event is kept, as BehaviorRelay does, there is a temptation to store the data in memory or use BehaviorRelay as a way to pass data between Activities. 
 
 **`BusRelay`**
 
