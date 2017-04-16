@@ -28,7 +28,7 @@ relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
-Why not just used `BehaviorRelay`?
+Why not just use `BehaviorRelay`?
 
 If the event is kept, as `BehaviorRelay` does, on rotation the event is handled again, with posible undesired side effects.
 
