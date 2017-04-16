@@ -1,5 +1,5 @@
 # RxBus
-An RxJava (2) Android specific Event Bus
+A RxJava (2) Android specific Event Bus
 
 Based on https://github.com/JakeWharton/RxRelay 
 
@@ -32,3 +32,6 @@ relay.subscribe(observer2);
 relay.accept("two");
 relay.accept("three");
 ```
+**`Setup instructions`**
+
+https://jitpack.io/#andrei-egeniq/rxbus/
