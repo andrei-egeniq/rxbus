@@ -35,3 +35,5 @@ relay.accept("three");
 **`Setup instructions`**
 
 https://jitpack.io/#andrei-egeniq/rxbus/
+
+No proguard rules are needed for the libray
